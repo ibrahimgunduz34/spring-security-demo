@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd5a3015-6e64-4772-a0a8-e4f6f761adf1" name="Changes" comment="Create public endpoint">
+    <list default="true" id="fd5a3015-6e64-4772-a0a8-e4f6f761adf1" name="Changes" comment="Test spring-security default behavior">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -131,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688582395596</updated>
-      <workItem from="1688582396620" duration="2401000" />
+      <workItem from="1688582396620" duration="5430000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1688582746310</created>
@@ -147,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688584042517</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test spring-security default behavior">
+      <created>1688584830777</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688584830777</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +162,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Create public endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create public endpoint" />
+    <MESSAGE value="Test spring-security default behavior" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test spring-security default behavior" />
   </component>
 </project>

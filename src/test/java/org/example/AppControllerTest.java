@@ -4,9 +4,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.MOCK)
@@ -17,15 +20,22 @@ class AppControllerTest {
 
     @Test
     public void getPublicContent() throws Exception {
-        // spring-security should block the access by default without any configuration
         mvc.perform(get("/public"))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Public content")));
     }
 
     @Test
+    @WithMockUser
     public void getPrivateContent() throws Exception {
-        // spring-security should block the access by default without any configuration
         mvc.perform(get("/private"))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Private content")));
+    }
+
+    @Test
+    public void getPrivateContentWithForbiddenRequest() throws Exception {
+        mvc.perform(get("/private"))
+                .andExpect(status().isForbidden());
     }
 }
