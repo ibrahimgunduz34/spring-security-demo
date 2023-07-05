@@ -11,3 +11,8 @@ It's a project to demonstrate how to integrate Spring Boot and Spring Security p
 ## To Do:
 * Authenticate users with credentials stored in a database
 * JWT based authentication
+
+## To Research
+* EnableWebMvc annotation
+* EnableMethodSecurity
+* Check other annotations https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html#annotation-method-interceptors
