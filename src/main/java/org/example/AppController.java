@@ -15,4 +15,14 @@ public class AppController {
     public ResponseEntity<String> getPrivateContent() {
         return ResponseEntity.ok("Private content!");
     }
+
+    @GetMapping("/admin/action1")
+    public ResponseEntity<String> getAdminAction1Content() {
+        return ResponseEntity.ok("Admin Action 1 content!");
+    }
+
+    @GetMapping("/admin/action2")
+    public ResponseEntity<String> getAdminAction1Conten2() {
+        return ResponseEntity.ok("Admin Action 2 content!");
+    }
 }

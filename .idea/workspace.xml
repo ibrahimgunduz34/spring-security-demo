@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd5a3015-6e64-4772-a0a8-e4f6f761adf1" name="Changes" comment="Test spring-security default behavior">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="fd5a3015-6e64-4772-a0a8-e4f6f761adf1" name="Changes" comment="Secure the private endpoint and allow accessing the public endpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688582395596</updated>
-      <workItem from="1688582396620" duration="5430000" />
+      <workItem from="1688582396620" duration="5908000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1688582746310</created>
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688584830777</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Secure the private endpoint and allow accessing the public endpoint">
+      <created>1688587915289</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688587915289</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +170,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Create public endpoint" />
     <MESSAGE value="Test spring-security default behavior" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test spring-security default behavior" />
+    <MESSAGE value="Secure the private endpoint and allow accessing the public endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Secure the private endpoint and allow accessing the public endpoint" />
   </component>
 </project>
