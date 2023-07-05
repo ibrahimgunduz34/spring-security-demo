@@ -9,6 +9,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.containsString;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -40,14 +41,14 @@ class AppControllerTest {
     @DisplayName("GET /private - without user authentication")
     public void getPrivateContentWithForbiddenRequest() throws Exception {
         mvc.perform(get("/private"))
-                .andExpect(status().isForbidden());
+                .andExpect(status().isUnauthorized());
     }
 
     @Test
     @DisplayName("GET /admin/action1 - without user authentication")
     public void getAdminAction1ContentBeforeConfigured() throws Exception {
         mvc.perform(get("/admin/action1"))
-                .andExpect(status().isForbidden());
+                .andExpect(status().isUnauthorized());
     }
 
     @Test
@@ -65,5 +66,20 @@ class AppControllerTest {
     public void getAdminAction1ContentWithAuthenticatedUserAndWithoutExpectedRole() throws Exception {
         mvc.perform(get("/admin/action1"))
                 .andExpect(status().isForbidden());
+    }
+
+    @Test
+    @DisplayName("GET /private - with user authentication")
+    public void getPrivateContentWithValidUserAuthentication() throws Exception {
+        mvc.perform(get("/private").with(httpBasic("appUser1", "appUserPwd")))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Private content")));
+    }
+
+    @Test
+    @DisplayName("GET /private - with failed user authentication")
+    public void getPrivateContentWithFailedUserAuthentication() throws Exception {
+        mvc.perform(get("/private").with(httpBasic("appUser1", "wrongPassword")))
+                .andExpect(status().isUnauthorized());
     }
 }
