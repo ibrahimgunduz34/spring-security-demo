@@ -10,4 +10,9 @@ public class AppController {
     public ResponseEntity<String> getPublicContent() {
         return ResponseEntity.ok("Public content!");
     }
+
+    @GetMapping("/private")
+    public ResponseEntity<String> getPrivateContent() {
+        return ResponseEntity.ok("Private content!");
+    }
 }
