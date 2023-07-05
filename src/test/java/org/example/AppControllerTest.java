@@ -44,16 +44,25 @@ class AppControllerTest {
     }
 
     @Test
-    @DisplayName("GET /admin/action1 - Before security configuration - without user authentication")
+    @DisplayName("GET /admin/action1 - without user authentication")
     public void getAdminAction1ContentBeforeConfigured() throws Exception {
         mvc.perform(get("/admin/action1"))
                 .andExpect(status().isForbidden());
     }
 
     @Test
-    @WithMockUser
-    @DisplayName("GET /admin/action1 - Before security configuration - with user authentication")
-    public void getAdminAction1ContentBeforeConfiguredWithAuthenticatedUser() throws Exception {
+    @WithMockUser(roles = "ADMIN")
+    @DisplayName("GET /admin/action1 - with user authentication - with the expected role")
+    public void getAdminAction1ContentWithAuthenticatedUserAndWithExpectedRole() throws Exception {
+        mvc.perform(get("/admin/action1"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Admin Action 1 content")));
+    }
+
+    @Test
+    @WithMockUser()
+    @DisplayName("GET /admin/action1 - with user authentication - without the expected role")
+    public void getAdminAction1ContentWithAuthenticatedUserAndWithoutExpectedRole() throws Exception {
         mvc.perform(get("/admin/action1"))
                 .andExpect(status().isForbidden());
     }
