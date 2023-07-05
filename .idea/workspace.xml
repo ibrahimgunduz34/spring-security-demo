@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd5a3015-6e64-4772-a0a8-e4f6f761adf1" name="Changes" comment="Allow access some endpoints with a specific role">
+    <list default="true" id="fd5a3015-6e64-4772-a0a8-e4f6f761adf1" name="Changes" comment="Allow access with basic authentication">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AppControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688582395596</updated>
-      <workItem from="1688582396620" duration="7472000" />
+      <workItem from="1688582396620" duration="9113000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1688582746310</created>
@@ -198,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688588854077</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Allow access with basic authentication">
+      <created>1688589889750</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688589889750</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +217,7 @@
     <MESSAGE value="Secure the private endpoint and allow accessing the public endpoint" />
     <MESSAGE value="Create a new endpoint and check the security layer behavior before configuration" />
     <MESSAGE value="Allow access some endpoints with a specific role" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allow access some endpoints with a specific role" />
+    <MESSAGE value="Allow access with basic authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allow access with basic authentication" />
   </component>
 </project>
